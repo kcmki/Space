@@ -1,0 +1,619 @@
+div.maincont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#Acceuil{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+    #Acceuil h1{
+        font-size: 5em;
+        font-family: torusN;
+        color: var(--blue);
+        margin: 10vw;
+        margin-bottom: 50px;
+        transition: 0.5s;
+    }
+        #Acceuil h1 span{
+            font-family: torus;
+            font-size: 0.8em;
+        }
+    #Acceuil a#button{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+
+        background-color: white;
+        border-radius: 50px;
+        border: 3px solid var(--blue);
+        width: 250px;
+        height: 80px;
+        margin: 10vw;
+        margin-top: 0px;
+        color: var(--blue);
+
+        transition: 0.5s;
+        z-index: 2;
+        overflow: hidden;
+    }
+        #Acceuil a#button::before{
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: var(--blue);
+            width: 250px;
+            height: 80px;
+            border-radius: 50px;
+            transform: translatex(-100%);
+            
+            transition: 0.5s;
+            z-index: -1;
+        }
+        #Acceuil a#button:hover::before{
+            transform: translatex(0);
+            transition: 0.5s;
+        }
+        #Acceuil a#button:hover{
+            color: white;
+            transition: 0.5s;
+        }
+section{
+    width: 100%;
+}
+        section .text{
+            width: 100%; 
+        }
+        section .text ul{
+            list-style: none;
+        }
+        section .text ul li{
+            margin-left: 20px;
+        }
+        section .text ul li::before{
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background-color: #66affc;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        section .text{
+            color: white;
+            font-size: 1em;
+            padding-bottom: 100px;
+        }
+        section .title{
+            color: white;
+            font-size: 2em;
+        }
+            section .text .title::before{
+                content:"";
+                background-color: #426cbe;
+                display: inline-block;
+                border: 2px solid white;
+                margin-right: 10px;
+                border-radius: 50%;
+                width: 0.8em ;
+                height: 0.8em ;
+            }
+            section .text .title::after{
+                content:"";
+                background-color: #426cbe;
+                display: block;
+                width: 4em ;
+                height: 0.2em ;
+                margin-bottom: 20px;
+                margin-top: 10px;
+                position: relative;
+                left: calc(0.8em + 10px);
+            }
+    #sec1{
+        width: 100%;
+        height: 1080px;
+        background-color: var(--bgcolor);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }   
+        #sec1 #separator{
+            width: 100%;
+            
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            position: relative;
+            bottom: 100px;
+            overflow-y:hidden;
+        }
+        #sec1 #separator img{
+            width: auto;
+            height: 400px;
+        }
+        #sec1 h2{
+            font-family: torusN;
+            font-size: 6em;
+            position: relative;
+            bottom: 150px;
+            display: block;
+            width: min-content;
+            margin-top: 0px;
+            padding-top: 0px;
+    
+            color: white;
+        }
+        #sec1 h2::before{
+            content:"";
+            display: block;
+            position: absolute;
+            width: 200px;
+            height: 50px;
+            background-color: #66affc;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            clip-path: polygon(0 50%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 50%, 85% 80%, 70% 50%, 50% 80%, 30% 50%, 15% 80%);
+    
+        }
+        #sec1 .text{
+            color: white;
+            font-size: 1em;
+            width: 50%;
+            padding-bottom: 100px;
+        }
+            #sec1 .title{
+                color: white;
+                font-size: 2em;
+            }
+            #sec1 .text .title::before{
+                content:"";
+                background-color: #426cbe;
+                display: inline-block;
+                border: 2px solid white;
+                margin-right: 10px;
+                border-radius: 50%;
+                width: 0.8em ;
+                height: 0.8em ;
+            }
+            #sec1 .text .title::after{
+                content:"";
+                background-color: #426cbe;
+                display: block;
+                width: 4em ;
+                height: 0.2em ;
+                margin-bottom: 20px;
+                margin-top: 10px;
+                position: relative;
+                left: calc(0.8em + 10px);
+            }
+    #sec2{
+        height: 1080px;
+        background-image: url("img/1.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+
+        filter: drop-shadow(0 0 10px var(--bgcolor));
+    }
+
+@media screen and (min-width:1500px) {
+    #sec2 .left{
+        margin-left: 200px;
+        width: 600px;
+    }
+    #sec2 .right{
+        width: calc(100% - 800px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width:1205px) and (max-width:1500px) {
+    #sec2 .left{
+        margin-left: 100px;
+        width: 600px;
+    }
+}
+@media screen and (max-width:1205px){
+    #sec2{
+        flex-direction: column;
+    }
+    #sec2 .left{
+        width: 500px;
+    }
+    #sec2 .right{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #sec2 .right img{
+        width: 400px;
+    }
+}
+
+    #sec3{
+        position: relative;
+        height: 900px;
+        background-image: url("img/3.svg");
+        background-size: cover;
+
+        bottom: 3px;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        filter: drop-shadow(0 0 10px var(--bgcolor));
+    }
+    #sec3 .left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 225px;
+        padding-right: 225px;
+    }
+    #sec3 .left img{
+        width: 370px;
+        height: auto;
+    }
+    #sec3 .title{
+        padding-left: 70px;
+        padding-top: 80px;
+    }
+    #sec3 .text{
+        padding-bottom: 0px;
+        width: 500px;
+        padding-left: 50px;
+    }
+@media screen and (max-width:1390px) {
+    #sec3 .text{
+        width: 400px;
+    }
+}
+@media screen and (max-width:1290px) {
+    #sec3 .text{
+        width: 320px;
+    }
+}
+@media screen and (max-width:1207px){
+        #sec3{
+            flex-direction: column-reverse;
+            background-image: url(img/5.svg);
+        }
+        #sec3 .left,#sec3 .right{
+            width: 500px;
+            margin: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #sec3 .left img{
+            width: 300px;
+            height: auto;
+        }
+        #sec3 .left{padding: 0px;}
+        #sec3 .text{
+            padding-bottom: 0px;
+            width: 500px;
+        }
+    
+    }
+
+
+
+#sec4{
+        background-image: linear-gradient(to bottom, #1e6cb5 0%, #232323 50%);
+        height: 1080px;
+        position: relative;
+        bottom: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #sec4 .left{
+        width: 40%;
+    }
+    #sec4 .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+    }
+    #sec4 .right img{
+        width: 60%;
+    }
+#planetes{
+    width: 100%;
+    background-color: var(--bgcolor);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    bottom:4px;
+
+    background-image: url(img/4.svg);
+    height: 4000px;
+}      
+    #planetes h2.planetes{
+        color: white;
+        font-size: 3em;
+        margin-bottom: 200px;
+    }
+        #planetes h2.planetes::after{
+            content: "";
+            display: block;
+            width: 150px;
+            height: 10px;
+            background-color:#66affc;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
+        }
+    #planetes .container{
+        display: grid;
+        width: 100%;
+        height: 3300px;
+    }
+        #planetes .container .planete{
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #planetes .container .infoplanete{
+            margin: 70px;
+            color: white;
+        }
+            #planetes .container .infoplanete .nom{
+                font-size: 2em;
+                font-weight: bold;
+            }
+                #planetes .container .infoplanete .nom::before{
+                    content:"";
+                    display: inline-block;
+                    position: relative;
+                    top: 2px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: #426cbe;
+                    border: 2px solid white;
+
+                }
+            #planetes .container .infoplanete .info{
+                font-size: 1em;
+                margin: 10px;
+            }
+            #planetes .container .planete.soleil{
+                grid-area: soleil;
+                height: 300px;
+                width: 100%;
+            }
+                #planetes .container .planete.soleil img{
+                    width: auto;
+                    height: 70%;
+                }
+                #planetes .container .infoplanete.soleil{
+                    grid-area: solinfo;
+                    height: 300px;
+                }
+            
+            #planetes .container .planete.pluto{
+                grid-area: pluto;
+            }
+            #planetes .container .planete.jupiter{
+                grid-area: jupiter;
+            }
+            #planetes .container .planete.neptune{
+                grid-area: neptune;
+            }
+            #planetes .container .planete.saturne{
+                grid-area: saturne;
+            }
+            #planetes .container .planete.uranus{
+                grid-area: uranus;
+            }
+            #planetes .container .planete.mars{
+                grid-area: mars;
+            }
+            #planetes .container .planete.terre{
+                grid-area: terre;
+            }
+            #planetes .container .planete.venus{
+                grid-area: venus;
+            }
+            #planetes .container .planete.mercure{
+                grid-area: mercure;
+            }
+
+            
+            #planetes .container .infoplanete.pluto{
+                grid-area: infopluto;
+            }
+            #planetes .container .infoplanete.jupiter{
+                grid-area: infojupiter;
+            }
+            #planetes .container .infoplanete.neptune{
+                grid-area: infoneptune;
+            }
+            #planetes .container .infoplanete.saturne{
+                grid-area: infosaturne;
+            }
+            #planetes .container .infoplanete.uranus{
+                grid-area: infouranus;
+            }
+            #planetes .container .infoplanete.mars{
+                grid-area: infomars;
+            }
+            #planetes .container .infoplanete.terre{
+                grid-area: infoterre;
+            }
+            #planetes .container .infoplanete.venus{
+                grid-area: infovenus;
+            }
+            #planetes .container .infoplanete.mercure{
+                grid-area: infomercure;
+            }
+
+    #planetes #separator{
+        width: 100%;
+        
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        top: 100px;
+        transform: rotate(180deg);
+
+    }
+        #planetes #separator img{
+            width: auto;
+            height: 400px;
+            color: #1e6cb5;
+        }
+        
+
+
+
+
+
+@media screen and (min-width: 1300px){
+    #Acceuil{
+        background-image: url(img/PaperghalaxywithstarsMin.png);
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    #planetes .container{
+        grid-template-columns: 800px 300px auto  ;
+        grid-template-rows: 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 190px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px ;
+        grid-template-areas: 
+        ". . ."/* 1 */
+        "infopluto pluto ."/* 2 */
+        "infopluto . ."/* 3 */
+        ". uranus infouranus"/* 4 */
+        ". . infouranus"/* 5 */
+        "infojupiter jupiter ."/* 6 */
+        "infojupiter . ."/* 7 */
+        "infoterre terre ."/* 8 */
+        "infoterre . ."/* 9 */
+        ". mercure infomercure"/* 10 */
+        "solinfo soleil ."/* 11 */
+        "solinfo soleil ."/* 12 */
+        ". . ."/* 13 */
+        ". venus infovenus"/* 14 */
+        ". . infovenus"/* 15 */
+        "infomars mars ."/* 16 */
+        "infomars . ."/* 17 */
+        ". saturne infosaturne"/* 18 */
+        ". . infosaturne"/* 19 */
+        "infoneptune neptune ."/* 20 */
+        "infoneptune . ."/* 21 */
+        ". . ."/* 22 */
+        ;
+    }
+ 
+
+}
+@media screen and (max-width: 1300px){
+    #Acceuil{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #planetes .container{
+        grid-template-columns: 800px 300px auto;
+        grid-template-rows: 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 190px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px ;
+        grid-template-areas: 
+        ". . ."/* 1 */
+        "infopluto pluto ."/* 2 */
+        "infopluto . ."/* 3 */
+        "infouranus uranus ."/* 4 */
+        "infouranus . ."/* 5 */
+        "infojupiter jupiter ."/* 6 */
+        "infojupiter . ."/* 7 */
+        "infoterre terre ."/* 8 */
+        "infoterre . ."/* 9 */
+        "infomercure mercure ."/* 10 */
+        "solinfo soleil ."/* 11 */
+        "solinfo soleil ."/* 12 */
+        ". . ."/* 13 */
+        "infovenus venus ."/* 14 */
+        "infovenus . ."/* 15 */
+        "infomars mars ."/* 16 */
+        "infomars . ."/* 17 */
+        "infosaturne saturne ."/* 18 */
+        "infosaturne . ."/* 19 */
+        "infoneptune neptune ."/* 20 */
+        "infoneptune . ."/* 21 */
+        ". . ."/* 22 */
+        ;
+    }
+
+}
+@media screen and (max-width:1420px){
+    #planetes .container{
+        grid-template-columns: 800px 300px auto;
+        grid-template-rows: 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 190px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px ;
+        grid-template-areas: 
+        ". . ."/* 1 */
+        "infopluto pluto ."/* 2 */
+        "infopluto . ."/* 3 */
+        "infouranus uranus ."/* 4 */
+        "infouranus . ."/* 5 */
+        "infojupiter jupiter ."/* 6 */
+        "infojupiter . ."/* 7 */
+        "infoterre terre ."/* 8 */
+        "infoterre . ."/* 9 */
+        "infomercure mercure ."/* 10 */
+        "solinfo soleil ."/* 11 */
+        "solinfo soleil ."/* 12 */
+        ". . ."/* 13 */
+        "infovenus venus ."/* 14 */
+        "infovenus . ."/* 15 */
+        "infomars mars ."/* 16 */
+        "infomars . ."/* 17 */
+        "infosaturne saturne ."/* 18 */
+        "infosaturne . ."/* 19 */
+        "infoneptune neptune ."/* 20 */
+        "infoneptune . ."/* 21 */
+        ". . ."/* 22 */
+        ;
+    }
+}
+@media screen and (max-width:1120px){
+    #planetes .container{
+        display: flex;
+        flex-direction: column;
+        height: 3500px;
+    }
+    #planetes h2.planetes{margin-bottom: 0px;}
+}
+.socials{
+    color: var(--blue);
+    text-decoration: none;
+}

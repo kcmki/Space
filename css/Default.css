@@ -1,0 +1,197 @@
+@font-face {
+    font-family: poppins;
+    src: url("fonts/Poppins-Regular.woff");
+}
+@font-face {
+    font-family: torusN;
+    src: url("fonts/Torus\ Notched\ SemiBold.ttf");
+}
+@font-face {
+    font-family: torus;
+    src: url("fonts/torus-notched.ttf");
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    font-family: poppins;
+}
+:root{
+    --blue:#161d39;
+    --bgcolor:#232323;
+}
+
+header{
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+    header .logo{
+        padding-left: 10vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+        header .logo img{
+            height: 130px;
+            width: auto;
+        }
+    header .links{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+        header .links ul{
+            width: 700px;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+            header .links ul li{
+                display: inline-block;
+                transition: 0.5s;
+            }
+                header .links ul li a{
+                    text-decoration: none;
+                    color: var(--blue);
+                    font-size: 1.2em;
+                    font-weight: bold;
+                }
+            header .links ul li:hover{
+                transform: scale(1.2);
+
+                transition: 0.5s;
+            }
+@media screen and (max-width: 1300px){
+                header{
+                    height: 150px;
+                    width: 100%;
+                    position: absolute;
+                    
+                    display: grid;
+                    grid-template-columns: 10% 90% ;
+                }
+                header .logo{
+                    padding: 0;
+                    width: 10vw;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+            }
+
+
+#navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    z-index: 100;
+
+    transform: translateX(-150px);
+    transition: 0.5s;
+}
+#navbar:hover{
+    transform: translateX(0px);
+    transition: 0.5s;
+}
+    #navbar .cont{
+        background-color: #1e6cb5 ;
+        box-shadow: inset 0px 0px 8px 3px #232323;
+        width: 200px;
+        height: min-content;
+        padding-top: 50px;
+        padding-bottom:50px ;
+        border-radius: 0px 50px 50px 0px;
+    }
+    #navbar .cont a{
+        height: 50px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 150px 50px;
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--blue);
+        transition: 0.5s;
+        font-size: 20px;
+    }
+        #navbar .cont a:hover{
+            font-size: 24px;
+            transition: 0.5s;
+        }
+        #navbar .cont a div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: torus;
+        }
+        #navbar .cont a .img{
+            width: 50px;
+            height: 50px;
+        }
+            #navbar .cont a div img{
+                width: 70%;
+            }
+
+            #apropos{
+    
+                background-color: white;
+                width: calc(100% - 240px);
+                padding: 120px;
+                display: flex;
+               
+                justify-content: center;
+                align-items: center;
+            
+                color: var(--blue);
+                font-weight: bolder;
+                font-size: 1.5em;
+                
+                background-image: url("img/16.jpg");
+                background-position: top;
+                background-repeat: no-repeat;
+            
+            }   
+                #apropos p{
+                    padding: 5px;
+                }
+                #apropos .left{
+                    margin-right:10px;
+                    padding: 20px;
+            
+            
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: center;
+                    
+            
+                    border-radius: 0px 0px 0px 25px;
+                    border-bottom: 3px solid #426cbe;
+                    border-left: 3px solid #426cbe;
+            
+                } 
+                #apropos .right{
+                    margin-left:10px;
+                    padding: 20px;
+            
+            
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    
+            
+                    border-radius: 0px 25px 0px 0px;
+                    border-top: 3px solid #426cbe;
+                    border-right: 3px solid #426cbe;
+                    
+                } 
